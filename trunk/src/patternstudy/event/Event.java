@@ -1,6 +1,6 @@
 package patternstudy.event;
 
-import com.qihoo.ecp.lang.DateTime;
+import patternstudy.temporal.timepoint.DateTime;
 
 public interface Event<T extends EventType, S>
 {
