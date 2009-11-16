@@ -1,4 +1,4 @@
-package patternstudy.util;
+package patternstudy.util.arg;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -7,8 +7,13 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.Map;
 import java.util.Set;
-import patternstudy.util.ArgsException.ErrorCode;
 
+import patternstudy.util.arg.ArgsException.ErrorCode;
+
+/**
+ * from Clean Code by Robert C. Martin
+ * 
+ */
 public class Args {
 	  private Map<Character, ArgumentMarshaler> marshalers; 
 	  private Set<Character> argsFound; 

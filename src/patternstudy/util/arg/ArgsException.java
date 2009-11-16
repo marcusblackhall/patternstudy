@@ -1,4 +1,4 @@
-package patternstudy.util;
+package patternstudy.util.arg;
 
 public class ArgsException extends Exception {
 	private static final long serialVersionUID = -2991006224602013466L;
