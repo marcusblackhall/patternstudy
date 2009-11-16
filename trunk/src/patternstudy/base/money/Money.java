@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.Currency;
 
 // http://www.google.com/codesearch/p?hl=en&sa=N&cd=1&ct=rc#DQyTOAr92ZM/trunk/generic-timeandmoney/src/main/java/com/domainlanguage/money/Money.java&q=timeandmoney
+// http://sourceforge.net/projects/timeandmoney/files/
 public class Money {
 	private static final Currency RMB = Currency.getInstance("CNY");
 	private static final Currency USD = Currency.getInstance("USD");
