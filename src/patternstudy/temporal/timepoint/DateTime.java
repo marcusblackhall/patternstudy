@@ -1,5 +1,7 @@
 package patternstudy.temporal.timepoint;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -11,15 +13,22 @@ import java.util.GregorianCalendar;
 public class DateTime implements Comparable<DateTime> {
 	private GregorianCalendar calendar;
 
-	public static final DateTime PAST = new DateTime(1, 1, 1);
-	public static final DateTime FUTURE = new DateTime(10000, 1, 1);
+	public static final DateTime PAST = DateTime.on(1, 1, 1);
+	public static final DateTime FUTURE = DateTime.on(10000, 1, 1);
+	
+	private static DateFormat dateTimeFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	private static DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
 	public DateTime(GregorianCalendar calendar) {
 		this.calendar = calendar;
 	}
 
-	public DateTime(int year, int month, int day) {
-		this(new GregorianCalendar(year, month - 1, day));
+	public static DateTime on(int year, int month, int day) {
+		return new DateTime(new GregorianCalendar(year, month - 1, day));
+	}
+	
+	public static DateTime at(int year, int month, int day, int hour, int minute, int second) {
+		return new DateTime(new GregorianCalendar(year, month - 1, day, hour, minute, second));
 	}
 
 	public static DateTime now() {
@@ -31,6 +40,45 @@ public class DateTime implements Comparable<DateTime> {
 		return now.setTime(0, 0, 0, 0);
 	}
 
+	public boolean before(DateTime other) {
+		return calendar.before(other.calendar);
+	}
+
+	public boolean after(DateTime other) {
+		return calendar.after(other.calendar);
+	}
+
+	public int compareTo(DateTime o) {
+		return calendar.compareTo(o.calendar);
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (!(obj instanceof DateTime))
+			return false;
+		DateTime other = (DateTime)obj;
+        return calendar.equals(other.calendar);
+	}
+	
+	@Override
+	public int hashCode() {
+		return calendar.hashCode();
+	}
+	
+    @Override
+    public String toString() {
+        return dateTimeFormat.format(calendar.getTime());
+    }
+    
+    public String toDateString() {
+    	return dateFormat.format(calendar.getTime());
+    }
+    
+    public String format(String pattern) {
+    	DateFormat format = new SimpleDateFormat(pattern);
+    	return format.format(calendar.getTime());
+    }
+    
 	public int getYear() {
 		return calendar.get(Calendar.YEAR);
 	}
@@ -57,11 +105,6 @@ public class DateTime implements Comparable<DateTime> {
 
 	public int getMilliSecond() {
 		return calendar.get(Calendar.MILLISECOND);
-	}
-
-	@Override
-	public int compareTo(DateTime o) {
-		return calendar.compareTo(o.calendar);
 	}
 
 	public Calendar getCalendar() {
