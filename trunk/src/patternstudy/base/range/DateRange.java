@@ -35,16 +35,16 @@ public class DateRange {
 	}
 	
 	public boolean isEmpty() {
-		return start.isAfter(end);
+		return start.after(end);
 	}
 	
-	public boolean includes(DateTime arg) {
-		return !arg.isBefore(start) && !arg.isAfter(end);
+	public boolean includes(DateTime dt) {
+		return !dt.before(start) && !dt.after(end);
 	}
 	
-	public boolean equals(Object arg) {
-		if (!(arg instanceof DateRange)) return false;
-		DateRange other = (DateRange)arg;
+	public boolean equals(Object obj) {
+		if (!(obj instanceof DateRange)) return false;
+		DateRange other = (DateRange)obj;
 		return start.equals(other.start) && end.equals(other.end);
 	}
 	
