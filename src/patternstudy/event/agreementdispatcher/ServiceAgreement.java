@@ -15,14 +15,14 @@ public class ServiceAgreement {
 		getRulesTemporalCollectionFor(eventType).put(date, rule);
 	}
 	
-	private TemporalCollection getRulesTemporalCollectionFor(EventType eventType) {
-		TemporalCollection result = (TemporalCollection)postingRules.get(eventType);
+	private SingleTemporalCollection getRulesTemporalCollectionFor(EventType eventType) {
+		SingleTemporalCollection result = (SingleTemporalCollection)postingRules.get(eventType);
 		assert result != null;
 		return result;
 	}
 	
 	private PostingRule getPostingRule(AccountingEvent event) {
-		final TemporalCollection rules = getRulesTemporalCollectionFor(event.getEventType());
+		final SingleTemporalCollection rules = getRulesTemporalCollectionFor(event.getEventType());
 		if (rules == null) throw new MissingPostingRuleException(this, event);
 		
 		try {
