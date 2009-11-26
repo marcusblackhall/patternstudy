@@ -8,23 +8,21 @@ public class DateRange {
 
 	public static DateRange EMPTY = new DateRange(DateTime.on(2000, 4, 1), DateTime.on(2000, 1, 1));
 
-	public static DateRange upTo(DateTime end) {
-		return new DateRange(DateTime.PAST, end);
-	}
-	
-	public static DateRange startingOn(DateTime start) {
-		return new DateRange(start, DateTime.FUTURE);
-	}
-	
 	public DateRange(DateTime start, DateTime end) {
 		this.start = start;
 		this.end = end;
 	}
 	
+	public static DateRange upTo(DateTime end) {
+		return new DateRange(DateTime.PAST, end);
+	}
+	public static DateRange startingOn(DateTime start) {
+		return new DateRange(start, DateTime.FUTURE);
+	}
+	
 	public DateTime start() {
 		return start;
 	}
-	
 	public DateTime end() {
 		return end;
 	}
@@ -40,6 +38,9 @@ public class DateRange {
 	
 	public boolean includes(DateTime dt) {
 		return !dt.before(start) && !dt.after(end);
+	}
+	public boolean includes(DateRange dr) {
+		return includes(dr.start) && includes(dr.end);
 	}
 	
 	public boolean equals(Object obj) {

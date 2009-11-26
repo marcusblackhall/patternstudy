@@ -65,11 +65,6 @@ a:hover,a:active{
 #wikiPage p{
   line-height:150%;
 }
-#wikiPage em{
-  font-style: normal;
-  font-size:1.2em;
-  color:#006b2a;
-}
 #wikiPage pre{
   background-color:#f7f9fa;
   border:1px dotted #8cacbb;
@@ -93,8 +88,6 @@ a:hover,a:active{
   list-style: decimal inside none;
   margin:0 18px 1em 60px;
   color:#000;
-}
-#wikiPage li{
 }
 #wikiPage li ul, #wikiPage li ol{
   margin:0 0 0 1.5em;
