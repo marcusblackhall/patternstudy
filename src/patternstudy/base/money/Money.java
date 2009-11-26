@@ -24,7 +24,6 @@ public class Money implements Comparable<Money> {
 	public static Money valueOf(BigDecimal amount, Currency currency) {
 		return new Money(amount, currency);
 	}
-	
 	public static Money valueOf(double amount, Currency currency) {
 		return new Money(new BigDecimal(amount), currency);
 	}
