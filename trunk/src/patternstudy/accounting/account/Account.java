@@ -26,30 +26,81 @@ public class Account {
 	}
 	
 	public void addEntry(Entry entry) {
-		
+		ensureSameCurrency(entry.getAmount());
+		entries.add(entry);
+		entry.setAccount(this);
 	}
 	void addEntry(Money amount, DateTime date) {
-		ensureSameCurrency(amount);
-		entries.add(new Entry(amount, date));
+		addEntry(new Entry(amount, date));
 	}
 	private void ensureSameCurrency(Money money) {
 		if (!money.getCurrency().equals(this.currency))
 			throw new IllegalArgumentException("New item has incompatable currency");
 	}
+
+	public Money balance() {
+		return balance(DateTime.today());
+	}
 	Money balance(DateRange period) {
-		Money result = new Money(0, currency);
+		Money result = Money.valueOf(0.0, currency);
 		for (Entry each : entries) {
-			if (period.includes(each.date()))
-				result = result.add(each.amount());
+			if (period.includes(each.getDate()))
+				result = result.add(each.getAmount());
+		}
+		return result;
+	}
+	Money balance(DateTime date) {
+		return balance(DateRange.upTo(date));
+	}
+	
+	public Account copy() {
+		Account result = new Account(currency, type);
+		for (Entry e : entries)
+			result.addEntry(e.copy());
+		return result;
+	}
+	
+	Money deposits(DateRange period) {
+		Money result = Money.valueOf(0, currency);
+		for (Entry e : entries) {
+			if (period.includes(e.getDate()) && e.getAmount().isPositive())
+				result.add(e.getAmount());
+		}
+		return result;
+	}
+	Money withdrawels(DateRange period) {
+		Money result = Money.valueOf(0, currency);
+		for (Entry e : entries) {
+			if (period.includes(e.getDate()) && e.getAmount().isNegative())
+				result.add(e.getAmount());
 		}
 		return result;
 	}
 	
-	Money balance(DateTime date) {
-		return balance(DateRuange.upTo(date));
+	public Entry[] entries() {
+		return entries.toArray(new Entry[entries.size()]);
 	}
 	
-	Money balance() {
-		return balance(DateTime.today());
+	boolean isValid() {
+		return allEntriesReferToMe();
+	}
+	boolean allEntriesReferToMe() {
+		for (Entry e: entries) {
+			if (e.getAccount() != this)
+				return false;
+		}
+		return true;
+	}
+	
+	public String toString() {
+		return "Acc: " + type;
+	}
+	
+	AccountType type() {
+		return type;
+	}
+	
+	void withdraw(Money amount, Account target, DateTime date) {
+		new AccountingTransaction(amount, this, target, date);
 	}
 }

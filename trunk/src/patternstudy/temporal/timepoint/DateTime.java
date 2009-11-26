@@ -12,6 +12,8 @@ import java.util.GregorianCalendar;
  */
 public class DateTime implements Comparable<DateTime> {
 	private GregorianCalendar calendar;
+	
+	private static DateTime myToday;
 
 	public static final DateTime PAST = DateTime.on(1, 1, 1);
 	public static final DateTime FUTURE = DateTime.on(10000, 1, 1);
@@ -36,6 +38,8 @@ public class DateTime implements Comparable<DateTime> {
 	}
 
 	public static DateTime today() {
+		if (myToday != null)
+			return myToday;
 		DateTime now = now();
 		return now.setTime(0, 0, 0, 0);
 	}
@@ -82,27 +86,21 @@ public class DateTime implements Comparable<DateTime> {
 	public int getYear() {
 		return calendar.get(Calendar.YEAR);
 	}
-
 	public int getMonth() {
 		return calendar.get(Calendar.MONTH + 1);
 	}
-
 	public int getDay() {
 		return calendar.get(Calendar.DATE);
 	}
-
 	public int getHour() {
 		return calendar.get(Calendar.HOUR_OF_DAY);
 	}
-
 	public int getMinute() {
 		return calendar.get(Calendar.MINUTE);
 	}
-
 	public int getSecond() {
 		return calendar.get(Calendar.SECOND);
 	}
-
 	public int getMilliSecond() {
 		return calendar.get(Calendar.MILLISECOND);
 	}
@@ -114,27 +112,21 @@ public class DateTime implements Comparable<DateTime> {
 	public DateTime addYears(int amount) {
 		return add(Calendar.YEAR, amount);
 	}
-
 	public DateTime addMonths(int amount) {
 		return add(Calendar.MONTH, amount);
 	}
-
 	public DateTime addDays(int amount) {
 		return add(Calendar.DATE, amount);
 	}
-
 	public DateTime addHours(int amount) {
 		return add(Calendar.HOUR_OF_DAY, amount);
 	}
-
 	public DateTime addMinutes(int amount) {
 		return add(Calendar.MINUTE, amount);
 	}
-
 	public DateTime addSeconds(int amount) {
 		return add(Calendar.SECOND, amount);
 	}
-
 	private DateTime add(int field, int amount) {
 		GregorianCalendar calendar = cloneCalendar(this);
 		calendar.add(field, amount);
@@ -148,7 +140,6 @@ public class DateTime implements Comparable<DateTime> {
 		calendar.set(Calendar.DATE, day);
 		return new DateTime(calendar);
 	}
-
 	public DateTime setTime(int hour, int minute, int second, int millisecond) {
 		GregorianCalendar calendar = cloneCalendar(this);
 		calendar.set(Calendar.HOUR_OF_DAY, hour);
@@ -156,6 +147,9 @@ public class DateTime implements Comparable<DateTime> {
 		calendar.set(Calendar.SECOND, second);
 		calendar.set(Calendar.MILLISECOND, millisecond);
 		return new DateTime(calendar);
+	}
+	public static void setToday(DateTime today) {
+		myToday = today;
 	}
 
 	private static GregorianCalendar cloneCalendar(DateTime dateTime) {

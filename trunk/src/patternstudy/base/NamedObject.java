@@ -12,9 +12,17 @@ public class NamedObject {
 	public String name() {
 		return name;
 	}
-	
 	public String toString() {
 		return name;
+	}
+	
+	protected void assertNonNull(Object obj, String message) {
+		if (obj == null)
+			throw new NullPointerException(message);
+	}
+	protected void assertNonNull(Object obj) {
+		if (obj == null)
+			throw new NullPointerException();
 	}
 	
 }

@@ -34,7 +34,7 @@ desc
 
 <script type="text/javascript"><!--
 window.onload = function() {
-  var creole = new Parse.Simple.Creole();
+  var creole = new Parse.Simple.Creole({forIE: document.all});
   creole.parse(document.getElementById('wikiPage'), document.getElementById('wikiText').value);
 }
 //--></script>
