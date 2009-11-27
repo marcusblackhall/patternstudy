@@ -1,4 +1,4 @@
-package patternstudy.event.agreementdispatcher;
+package patternstudy.accounting.accountingevent;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -8,6 +8,9 @@ import java.util.List;
 
 import patternstudy.accounting.accountingentry.Entry;
 import patternstudy.event.EventType;
+import patternstudy.event.agreementdispatcher.Customer;
+import patternstudy.event.agreementdispatcher.ServiceAgreement;
+import patternstudy.event.agreementdispatcher.Subject;
 import patternstudy.temporal.timepoint.DateTime;
 
 public class AccountingEvent {
@@ -34,7 +37,7 @@ public class AccountingEvent {
 		adjustedEvent.setReplacementEvent(this);
 	}
 	
-	void addResultingEntry(Entry entry) {
+	public void addResultingEntry(Entry entry) {
 		resultingEntries.add(entry);
 	}
 	void friendAddSecondaryEvent(AccountingEvent event) {

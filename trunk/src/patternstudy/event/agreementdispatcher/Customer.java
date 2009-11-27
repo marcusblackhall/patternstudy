@@ -6,6 +6,7 @@ import java.util.Map;
 import patternstudy.accounting.account.Account;
 import patternstudy.accounting.account.AccountType;
 import patternstudy.accounting.accountingentry.Entry;
+import patternstudy.accounting.accountingevent.AccountingEvent;
 import patternstudy.base.NamedObject;
 import patternstudy.base.money.Money;
 
