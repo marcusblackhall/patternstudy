@@ -5,6 +5,7 @@ import java.util.Currency;
 import java.util.List;
 
 import patternstudy.accounting.accountingentry.Entry;
+import patternstudy.accounting.accountingtransaction.AccountingTransaction;
 import patternstudy.base.money.Money;
 import patternstudy.base.range.DateRange;
 import patternstudy.temporal.timepoint.DateTime;
@@ -96,7 +97,7 @@ public class Account {
 		return "Acc: " + type;
 	}
 	
-	AccountType type() {
+	public AccountType type() {
 		return type;
 	}
 	

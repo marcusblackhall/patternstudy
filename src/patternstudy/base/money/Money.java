@@ -8,8 +8,8 @@ import java.util.Iterator;
 // http://www.google.com/codesearch/p?hl=en&sa=N&cd=1&ct=rc#DQyTOAr92ZM/trunk/generic-timeandmoney/src/main/java/com/domainlanguage/money/Money.java&q=timeandmoney
 // http://sourceforge.net/projects/timeandmoney/files/
 public class Money implements Comparable<Money> {
-	private static final Currency RMB = Currency.getInstance("CNY");
-	private static final Currency USD = Currency.getInstance("USD");
+	public static final Currency RMB = Currency.getInstance("CNY");
+	public static final Currency USD = Currency.getInstance("USD");
 	
 	private BigDecimal amount;
 	private Currency currency;
