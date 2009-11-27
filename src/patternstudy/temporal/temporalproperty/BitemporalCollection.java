@@ -34,13 +34,15 @@ public class BitemporalCollection<E> implements TemporalCollection<E> {
 		return get(DateTime.today());
 	}
 
-	public void put(DateTime validDate, E item) {
+	public BitemporalCollection<E> put(DateTime validDate, E item) {
 		contents.put(DateTime.today(), currentValidHistory().copy());
 		currentValidHistory().put(validDate, item);
+		return this;
 	}
 
-	public void put(E item) {
+	public BitemporalCollection<E> put(E item) {
 		put(DateTime.today(), item);
+		return this;
 	}
 
 }

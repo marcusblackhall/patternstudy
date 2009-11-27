@@ -1,19 +1,21 @@
 package patternstudy.event.agreementdispatcher.test;
 
-import patternstudy.event.agreementdispatcher.AccountingEvent;
+import junit.framework.TestCase;
+import patternstudy.accounting.account.AccountType;
+import patternstudy.accounting.accountingevent.AccountingEvent;
+import patternstudy.accounting.accountingevent.Usage;
+import patternstudy.base.money.Money;
+import patternstudy.base.unit.Unit;
 import patternstudy.event.agreementdispatcher.Customer;
 import patternstudy.event.agreementdispatcher.EventList;
-import patternstudy.event.agreementdispatcher.MultiplyByRatePR;
 import patternstudy.event.agreementdispatcher.ServiceAgreement;
-import patternstudy.event.agreementdispatcher.Usage;
 import patternstudy.temporal.timepoint.DateTime;
-import junit.framework.TestCase;
 
 public class ExampleTester extends TestCase {
 
 	public void testSimpleRule() {
 		Customer mycroft = new Customer("Mycroft Homes");
-		mycroft.setServiceAgreement(simpleAgreemneet());
+		mycroft.setServiceAgreement(simpleAgreement());
 		AccountingEvent usageEvent = new Usage(Unit.KWH.amount(50),
 			DateTime.on(1999, 10, 1),
 			DateTime.on(1999, 10, 15),
@@ -29,10 +31,10 @@ public class ExampleTester extends TestCase {
 	
 	private ServiceAgreement simpleAgreement() {
 		ServiceAgreement result = new ServiceAgreement();
-		result.setRate(10, DateTime.PAST);
-		result.addPostingRule(EventType.USAGE,
-				new MultiplyByRatePR(AccountType.BASE_USAGE, false),
-				DateTime.on(1999, 10, 1));
+//		result.setRate(10, DateTime.PAST);
+//		result.addPostingRule(EventType.USAGE,
+//				new MultiplyByRatePR(AccountType.BASE_USAGE, false),
+//				DateTime.on(1999, 10, 1));
 		return result;
 	}
 }

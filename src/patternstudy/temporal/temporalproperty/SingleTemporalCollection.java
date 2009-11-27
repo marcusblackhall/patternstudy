@@ -23,9 +23,10 @@ public class SingleTemporalCollection<E> implements TemporalCollection<E> {
 		throw new IllegalArgumentException("no records that early");
 	}
 
-	public void put(DateTime at, E item) {
+	public SingleTemporalCollection<E> put(DateTime at, E item) {
 		contents.put(at, item);
 		clearMilestoneCache();
+		return this;
 	}
 	
 	/**
@@ -52,8 +53,9 @@ public class SingleTemporalCollection<E> implements TemporalCollection<E> {
 		return get(DateTime.today());
 	}
 
-	public void put(E item) {
+	public SingleTemporalCollection<E> put(E item) {
 		put(DateTime.today(), item);
+		return this;
 	}
 	
 	public SingleTemporalCollection<E> copy() {
