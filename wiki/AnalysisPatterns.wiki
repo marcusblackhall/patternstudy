@@ -1,4 +1,5 @@
 #summary 分析模式一览
+#sidebar SideNav
 
 分析模式一览:
 
