@@ -1,7 +1,7 @@
-=== 概述 ===
+概述
   * [Welcome 首页] 
   * [http://code.google.com/p/patternstudy/w/list 所有页面]
-=== 设计模式 ===
+设计模式
   * [CreationalPatterns 创建型]
     * [AbstractFactory 抽象工厂]
     * [Builder 生成器]
