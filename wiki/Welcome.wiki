@@ -3,12 +3,11 @@
 = 概述 =
 各类模式的学习和实证，构造示例代码。
 
-= 模式 =
+= 模式一览 =
 == [DesignPatterns 设计模式] ==
-  * [CreationalPatterns 创建型]
-    * [AbstractFactory 抽象工厂]
-    * [Builder 生成器]
-    * [FactoryMethod 工厂方法]
+  * [CreationalPatterns 创建型] ===
+|| [AbstractFactory 抽象工厂] || [Builder 生成器] ||
+|| [FactoryMethod 工厂方法] || - ||
     * [Prototype 原型]
     * [Singleton 单例]
   * [StructuralPatterns 结构型]
