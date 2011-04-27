@@ -1,4 +1,4 @@
-package dsl.decisiontable;
+package study.pattern.dsl.altcompmodel.decisiontable;
 
 public enum Bool3 {
     T("Y"),
