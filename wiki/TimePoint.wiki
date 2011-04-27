@@ -3,7 +3,9 @@
 = Time Point 时间点  =
 
 {{{
+
 代表某种时间粒度上的一个点
+
 }}}
 
   * 出处：Martin Fowler， http://www.martinfowler.com/eaaDev/TimePoint.html
