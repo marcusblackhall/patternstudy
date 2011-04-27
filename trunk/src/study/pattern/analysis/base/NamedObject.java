@@ -1,4 +1,4 @@
-package patternstudy.base;
+package study.pattern.analysis.base;
 
 public class NamedObject {
 	protected String name = "noname";

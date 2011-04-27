@@ -1,4 +1,4 @@
-package patternstudy.accounting.account;
+package study.pattern.analysis.accounting.account;
 
 public enum AccountType {
 	BASE_USAGE,

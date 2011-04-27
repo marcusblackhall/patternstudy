@@ -1,9 +1,9 @@
-package patternstudy.base.registry;
+package study.pattern.analysis.base.registry;
 
 import java.util.Dictionary;
 import java.util.Hashtable;
 
-import patternstudy.base.NamedObject;
+import study.pattern.analysis.base.NamedObject;
 
 public class Registry {
 	private static Registry soleInstance = new Registry();

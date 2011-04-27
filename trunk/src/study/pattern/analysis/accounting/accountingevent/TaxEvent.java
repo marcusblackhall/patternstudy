@@ -1,7 +1,7 @@
-package patternstudy.accounting.accountingevent;
+package study.pattern.analysis.accounting.accountingevent;
 
-import patternstudy.base.money.Money;
-import patternstudy.event.EventType;
+import study.pattern.analysis.base.money.Money;
+import study.pattern.analysis.event.EventType;
 
 public class TaxEvent extends MonetaryEvent {
 	public TaxEvent(AccountingEvent base, Money taxableAmount) {

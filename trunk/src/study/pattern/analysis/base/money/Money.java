@@ -1,4 +1,4 @@
-package patternstudy.base.money;
+package study.pattern.analysis.base.money;
 
 import java.math.BigDecimal;
 import java.util.Collection;

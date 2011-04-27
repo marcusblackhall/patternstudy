@@ -1,4 +1,4 @@
-package patternstudy.accounting.accountingevent;
+package study.pattern.analysis.accounting.accountingevent;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -6,12 +6,12 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
-import patternstudy.accounting.accountingentry.Entry;
-import patternstudy.event.EventType;
-import patternstudy.event.agreementdispatcher.Customer;
-import patternstudy.event.agreementdispatcher.ServiceAgreement;
-import patternstudy.event.agreementdispatcher.Subject;
-import patternstudy.temporal.timepoint.DateTime;
+import study.pattern.analysis.accounting.accountingentry.Entry;
+import study.pattern.analysis.event.EventType;
+import study.pattern.analysis.event.agreementdispatcher.Customer;
+import study.pattern.analysis.event.agreementdispatcher.ServiceAgreement;
+import study.pattern.analysis.event.agreementdispatcher.Subject;
+import study.pattern.analysis.temporal.timepoint.DateTime;
 
 public class AccountingEvent {
 	private EventType type;

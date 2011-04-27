@@ -1,8 +1,8 @@
-package patternstudy.base.unit;
+package study.pattern.analysis.base.unit;
 
-import patternstudy.base.NamedObject;
-import patternstudy.base.quantity.Quantity;
-import patternstudy.base.registry.Registry;
+import study.pattern.analysis.base.NamedObject;
+import study.pattern.analysis.base.quantity.Quantity;
+import study.pattern.analysis.base.registry.Registry;
 
 public class Unit extends NamedObject {
 	public static Unit KWH = new Unit("kwh");

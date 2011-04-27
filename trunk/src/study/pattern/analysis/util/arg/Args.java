@@ -1,4 +1,4 @@
-package patternstudy.util.arg;
+package study.pattern.analysis.util.arg;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -8,7 +8,7 @@ import java.util.ListIterator;
 import java.util.Map;
 import java.util.Set;
 
-import patternstudy.util.arg.ArgsException.ErrorCode;
+import study.pattern.analysis.util.arg.ArgsException.ErrorCode;
 
 /**
  * from Clean Code by Robert C. Martin

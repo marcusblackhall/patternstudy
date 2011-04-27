@@ -1,4 +1,4 @@
-package patternstudy.accounting;
+package study.pattern.analysis.accounting;
 
 public class AccountingException extends RuntimeException {
 	private static final long serialVersionUID = 1L;

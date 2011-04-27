@@ -1,8 +1,8 @@
-package patternstudy.event.agreementdispatcher;
+package study.pattern.analysis.event.agreementdispatcher;
 
-import patternstudy.accounting.account.AccountType;
-import patternstudy.accounting.accountingentry.Entry;
-import patternstudy.accounting.accountingevent.AccountingEvent;
+import study.pattern.analysis.accounting.account.AccountType;
+import study.pattern.analysis.accounting.accountingentry.Entry;
+import study.pattern.analysis.accounting.accountingevent.AccountingEvent;
 
 public interface Subject {
 	void addEntry(Entry entry, AccountType type);

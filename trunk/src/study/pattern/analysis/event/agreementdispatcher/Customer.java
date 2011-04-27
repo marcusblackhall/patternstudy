@@ -1,14 +1,14 @@
-package patternstudy.event.agreementdispatcher;
+package study.pattern.analysis.event.agreementdispatcher;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import patternstudy.accounting.account.Account;
-import patternstudy.accounting.account.AccountType;
-import patternstudy.accounting.accountingentry.Entry;
-import patternstudy.accounting.accountingevent.AccountingEvent;
-import patternstudy.base.NamedObject;
-import patternstudy.base.money.Money;
+import study.pattern.analysis.accounting.account.Account;
+import study.pattern.analysis.accounting.account.AccountType;
+import study.pattern.analysis.accounting.accountingentry.Entry;
+import study.pattern.analysis.accounting.accountingevent.AccountingEvent;
+import study.pattern.analysis.base.NamedObject;
+import study.pattern.analysis.base.money.Money;
 
 public class Customer extends NamedObject implements Subject {
 	private ServiceAgreement serviceAgreement;

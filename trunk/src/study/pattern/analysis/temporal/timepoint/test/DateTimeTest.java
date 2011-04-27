@@ -1,4 +1,4 @@
-package patternstudy.temporal.timepoint.test;
+package study.pattern.analysis.temporal.timepoint.test;
 
 import junit.framework.TestCase;
 

@@ -1,9 +1,9 @@
-package patternstudy.event.agreementdispatcher;
+package study.pattern.analysis.event.agreementdispatcher;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import patternstudy.accounting.accountingevent.AccountingEvent;
+import study.pattern.analysis.accounting.accountingevent.AccountingEvent;
 
 public class EventList {
 	// TODO: consider separate processed/unprocessed lists

@@ -1,4 +1,4 @@
-package patternstudy.temporal.timepoint;
+package study.pattern.analysis.temporal.timepoint;
 
 import java.text.DateFormat;
 import java.text.ParsePosition;

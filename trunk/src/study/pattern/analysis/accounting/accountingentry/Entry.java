@@ -1,10 +1,10 @@
-package patternstudy.accounting.accountingentry;
+package study.pattern.analysis.accounting.accountingentry;
 
 import java.util.Collection;
 
-import patternstudy.accounting.account.Account;
-import patternstudy.base.money.Money;
-import patternstudy.temporal.timepoint.DateTime;
+import study.pattern.analysis.accounting.account.Account;
+import study.pattern.analysis.base.money.Money;
+import study.pattern.analysis.temporal.timepoint.DateTime;
 
 /**
  * @url http://www.martinfowler.com/eaaDev/AccountingEntry.html

@@ -1,6 +1,6 @@
-package patternstudy.temporal.temporalproperty;
+package study.pattern.analysis.temporal.temporalproperty;
 
-import patternstudy.temporal.timepoint.DateTime;
+import study.pattern.analysis.temporal.timepoint.DateTime;
 
 /**
  * The key data structure of this class is a temporal collection of temporal collections.

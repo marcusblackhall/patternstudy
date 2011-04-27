@@ -1,7 +1,7 @@
-package patternstudy.event;
+package study.pattern.analysis.event;
 
-import patternstudy.base.NamedObject;
-import patternstudy.base.registry.Registry;
+import study.pattern.analysis.base.NamedObject;
+import study.pattern.analysis.base.registry.Registry;
 
 public class EventType extends NamedObject {
 	public static final EventType USAGE = new EventType("usage");

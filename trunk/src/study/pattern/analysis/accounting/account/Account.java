@@ -1,14 +1,14 @@
-package patternstudy.accounting.account;
+package study.pattern.analysis.accounting.account;
 
 import java.util.ArrayList;
 import java.util.Currency;
 import java.util.List;
 
-import patternstudy.accounting.accountingentry.Entry;
-import patternstudy.accounting.accountingtransaction.AccountingTransaction;
-import patternstudy.base.money.Money;
-import patternstudy.base.range.DateRange;
-import patternstudy.temporal.timepoint.DateTime;
+import study.pattern.analysis.accounting.accountingentry.Entry;
+import study.pattern.analysis.accounting.accountingtransaction.AccountingTransaction;
+import study.pattern.analysis.base.money.Money;
+import study.pattern.analysis.base.range.DateRange;
+import study.pattern.analysis.temporal.timepoint.DateTime;
 
 /**
  * @url http://www.martinfowler.com/eaaDev/Account.html

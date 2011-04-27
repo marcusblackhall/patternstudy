@@ -1,4 +1,4 @@
-package patternstudy.util.arg;
+package study.pattern.analysis.util.arg;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
