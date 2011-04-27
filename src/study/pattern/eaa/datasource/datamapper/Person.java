@@ -1,6 +1,6 @@
-package eaa.datasource.datamapper;
+package study.pattern.eaa.datasource.datamapper;
 
-import eaa.base.layersupertype.DomainObject;
+import study.pattern.eaa.base.layersupertype.DomainObject;
 
 public class Person extends DomainObject {
     private String lastName;

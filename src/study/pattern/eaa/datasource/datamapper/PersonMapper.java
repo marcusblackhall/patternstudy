@@ -1,11 +1,11 @@
-package eaa.datasource.datamapper;
+package study.pattern.eaa.datasource.datamapper;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-import eaa.base.layersupertype.DomainObject;
+import study.pattern.eaa.base.layersupertype.DomainObject;
 
 public class PersonMapper extends AbstractMapper {
     protected String findStatement() {
