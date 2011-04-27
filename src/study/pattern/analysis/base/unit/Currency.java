@@ -1,4 +1,4 @@
-package patternstudy.base.unit;
+package study.pattern.analysis.base.unit;
 
 import java.text.NumberFormat;
 import java.util.Locale;

@@ -1,6 +1,6 @@
-package patternstudy.base.range;
+package study.pattern.analysis.base.range;
 
-import patternstudy.temporal.timepoint.DateTime;
+import study.pattern.analysis.temporal.timepoint.DateTime;
 
 public class DateRange {
 	private DateTime start;

@@ -1,15 +1,15 @@
-package patternstudy.event.agreementdispatcher.test;
+package study.pattern.analysis.event.agreementdispatcher.test;
 
 import junit.framework.TestCase;
-import patternstudy.accounting.account.AccountType;
-import patternstudy.accounting.accountingevent.AccountingEvent;
-import patternstudy.accounting.accountingevent.Usage;
-import patternstudy.base.money.Money;
-import patternstudy.base.unit.Unit;
-import patternstudy.event.agreementdispatcher.Customer;
-import patternstudy.event.agreementdispatcher.EventList;
-import patternstudy.event.agreementdispatcher.ServiceAgreement;
-import patternstudy.temporal.timepoint.DateTime;
+import study.pattern.analysis.accounting.account.AccountType;
+import study.pattern.analysis.accounting.accountingevent.AccountingEvent;
+import study.pattern.analysis.accounting.accountingevent.Usage;
+import study.pattern.analysis.base.money.Money;
+import study.pattern.analysis.base.unit.Unit;
+import study.pattern.analysis.event.agreementdispatcher.Customer;
+import study.pattern.analysis.event.agreementdispatcher.EventList;
+import study.pattern.analysis.event.agreementdispatcher.ServiceAgreement;
+import study.pattern.analysis.temporal.timepoint.DateTime;
 
 public class ExampleTester extends TestCase {
 

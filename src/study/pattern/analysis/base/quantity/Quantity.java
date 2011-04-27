@@ -1,6 +1,6 @@
-package patternstudy.base.quantity;
+package study.pattern.analysis.base.quantity;
 
-import patternstudy.base.unit.Unit;
+import study.pattern.analysis.base.unit.Unit;
 
 public class Quantity {
 	protected double amount;

@@ -1,9 +1,9 @@
-package patternstudy.accounting.accountingtransaction;
+package study.pattern.analysis.accounting.accountingtransaction;
 
-import patternstudy.accounting.account.Account;
-import patternstudy.accounting.accountingentry.Entry;
-import patternstudy.base.money.Money;
-import patternstudy.temporal.timepoint.DateTime;
+import study.pattern.analysis.accounting.account.Account;
+import study.pattern.analysis.accounting.accountingentry.Entry;
+import study.pattern.analysis.base.money.Money;
+import study.pattern.analysis.temporal.timepoint.DateTime;
 
 public class AccountingTransaction {
 	public AccountingTransaction(Money amount, Account from, Account to, DateTime date) {

@@ -1,6 +1,6 @@
-package patternstudy.event;
+package study.pattern.analysis.event;
 
-import patternstudy.temporal.timepoint.DateTime;
+import study.pattern.analysis.temporal.timepoint.DateTime;
 
 public interface Event<T extends EventType, S>
 {

@@ -1,10 +1,10 @@
-package patternstudy.accounting.accountingevent;
+package study.pattern.analysis.accounting.accountingevent;
 
-import patternstudy.base.quantity.Quantity;
-import patternstudy.event.EventType;
-import patternstudy.event.agreementdispatcher.Customer;
-import patternstudy.event.agreementdispatcher.Subject;
-import patternstudy.temporal.timepoint.DateTime;
+import study.pattern.analysis.base.quantity.Quantity;
+import study.pattern.analysis.event.EventType;
+import study.pattern.analysis.event.agreementdispatcher.Customer;
+import study.pattern.analysis.event.agreementdispatcher.Subject;
+import study.pattern.analysis.temporal.timepoint.DateTime;
 
 public class Usage extends AccountingEvent {
 	private Quantity amount;

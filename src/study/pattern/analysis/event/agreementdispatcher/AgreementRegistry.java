@@ -1,4 +1,4 @@
-package patternstudy.event.agreementdispatcher;
+package study.pattern.analysis.event.agreementdispatcher;
 
 import java.util.HashMap;
 import java.util.Map;

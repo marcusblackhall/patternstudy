@@ -1,9 +1,9 @@
-package patternstudy.accounting.accountingevent;
+package study.pattern.analysis.accounting.accountingevent;
 
-import patternstudy.base.money.Money;
-import patternstudy.event.EventType;
-import patternstudy.event.agreementdispatcher.Subject;
-import patternstudy.temporal.timepoint.DateTime;
+import study.pattern.analysis.base.money.Money;
+import study.pattern.analysis.event.EventType;
+import study.pattern.analysis.event.agreementdispatcher.Subject;
+import study.pattern.analysis.temporal.timepoint.DateTime;
 
 public class MonetaryEvent extends AccountingEvent {
 	private Money amount;

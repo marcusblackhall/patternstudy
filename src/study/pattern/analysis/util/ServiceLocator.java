@@ -1,4 +1,4 @@
-package patternstudy.util;
+package study.pattern.analysis.util;
 
 public interface ServiceLocator {
 

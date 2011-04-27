@@ -1,10 +1,10 @@
-package patternstudy.accounting.accountingevent;
+package study.pattern.analysis.accounting.accountingevent;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import patternstudy.event.agreementdispatcher.Subject;
-import patternstudy.temporal.timepoint.DateTime;
+import study.pattern.analysis.event.agreementdispatcher.Subject;
+import study.pattern.analysis.temporal.timepoint.DateTime;
 
 public class Adjustment extends AccountingEvent {
 	protected List<AccountingEvent> newEvents = new ArrayList<AccountingEvent>();

@@ -1,9 +1,9 @@
-package patternstudy.accounting.postingrule;
+package study.pattern.analysis.accounting.postingrule;
 
-import patternstudy.accounting.account.AccountType;
-import patternstudy.accounting.accountingevent.AccountingEvent;
-import patternstudy.accounting.accountingevent.Usage;
-import patternstudy.base.money.Money;
+import study.pattern.analysis.accounting.account.AccountType;
+import study.pattern.analysis.accounting.accountingevent.AccountingEvent;
+import study.pattern.analysis.accounting.accountingevent.Usage;
+import study.pattern.analysis.base.money.Money;
 
 public class MultiplyByRatePR extends PostingRule {
 	public MultiplyByRatePR(AccountType type, boolean isTaxable) {

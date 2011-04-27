@@ -1,15 +1,15 @@
-package patternstudy.event.agreementdispatcher;
+package study.pattern.analysis.event.agreementdispatcher;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import patternstudy.accounting.accountingevent.AccountingEvent;
-import patternstudy.accounting.postingrule.MissingPostingRuleException;
-import patternstudy.accounting.postingrule.PostingRule;
-import patternstudy.event.EventType;
-import patternstudy.temporal.temporalproperty.SingleTemporalCollection;
-import patternstudy.temporal.temporalproperty.TemporalCollection;
-import patternstudy.temporal.timepoint.DateTime;
+import study.pattern.analysis.accounting.accountingevent.AccountingEvent;
+import study.pattern.analysis.accounting.postingrule.MissingPostingRuleException;
+import study.pattern.analysis.accounting.postingrule.PostingRule;
+import study.pattern.analysis.event.EventType;
+import study.pattern.analysis.temporal.temporalproperty.SingleTemporalCollection;
+import study.pattern.analysis.temporal.temporalproperty.TemporalCollection;
+import study.pattern.analysis.temporal.timepoint.DateTime;
 
 public class ServiceAgreement {
 	private Map<String, TemporalCollection<Object>> values = new HashMap<String, TemporalCollection<Object>>();

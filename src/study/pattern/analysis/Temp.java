@@ -1,10 +1,10 @@
-package patternstudy;
+package study.pattern.analysis;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.TimeZone;
 
-import patternstudy.temporal.timepoint.DateTime;
+import study.pattern.analysis.temporal.timepoint.DateTime;
 
 public class Temp {
 	private static final TimeZone GMT = TimeZone.getTimeZone("Universal");

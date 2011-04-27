@@ -1,4 +1,4 @@
-package patternstudy.temporal.temporalproperty;
+package study.pattern.analysis.temporal.temporalproperty;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import patternstudy.temporal.timepoint.DateTime;
+import study.pattern.analysis.temporal.timepoint.DateTime;
 
 public class SingleTemporalCollection<E> implements TemporalCollection<E> {
 	private Map<DateTime, E> contents = new HashMap<DateTime, E>();
