@@ -1,4 +1,4 @@
-package eaa.datasource.datamapper;
+package study.pattern.eaa.datasource.datamapper;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

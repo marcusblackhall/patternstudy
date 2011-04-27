@@ -1,4 +1,4 @@
-package eaa.datasource.datamapper;
+package study.pattern.eaa.datasource.datamapper;
 
 
 public class ApplicationException extends RuntimeException {

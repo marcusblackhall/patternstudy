@@ -1,4 +1,4 @@
-package eaa.base.layersupertype;
+package study.pattern.eaa.base.layersupertype;
 
 public class DomainObject {
     private Long ID;

@@ -1,4 +1,4 @@
-package eaa.datasource.datamapper;
+package study.pattern.eaa.datasource.datamapper;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import eaa.base.layersupertype.DomainObject;
+import study.pattern.eaa.base.layersupertype.DomainObject;
 
 public abstract class AbstractMapper {
     protected Map loadedMap = new HashMap();
