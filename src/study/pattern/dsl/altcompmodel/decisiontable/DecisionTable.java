@@ -1,4 +1,4 @@
-package dsl.decisiontable;
+package study.pattern.dsl.altcompmodel.decisiontable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,7 +45,21 @@ public class DecisionTable<TI, TO> {
     }
     
     public TO run(TI arg) {
-        
+        ConditionBlock conditionValues = calculateConditionValue(arg);
+        for (Column<TO> col : columns) {
+            if (col.getConditions().matches(conditionValues)) {
+                return col.getResult();
+            }
+        }
+        throw new RuntimeException("Missing Condition Permutation" + conditionValues); 
+    }
+
+    private ConditionBlock calculateConditionValue(TI arg) {
+        List<Bool3> result = new ArrayList<Bool3>();
+        for (Condition<TI> cond : conditions) {
+            result.add(cond.test(arg));
+        }
+        return new ConditionBlock(result);
     }
 
 }

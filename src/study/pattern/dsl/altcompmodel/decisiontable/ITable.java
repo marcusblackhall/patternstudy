@@ -1,4 +1,4 @@
-package dsl.decisiontable;
+package study.pattern.dsl.altcompmodel.decisiontable;
 
 public interface ITable {
     

@@ -1,4 +1,4 @@
-package dsl.decisiontable;
+package study.pattern.dsl.altcompmodel.decisiontable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
