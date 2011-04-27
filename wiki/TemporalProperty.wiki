@@ -1,14 +1,14 @@
 #summary Temporal Property 时序属性
 
 = Temporal Property 时序属性  =
-{{{
-随时间变化的属性
-}}}
+
+  随时间变化的属性
+
 
 通常的属性，仅反应对象当前的属性；然而有时候需要查询过去某个时间点的属性，该属性值可能已发生变化。
 
 === 运行机制 ===
-  * 使用[[../timepoint/wiki.html|Time Point]]作为访问方法的参数
+  * 使用[TimePoint]作为访问方法的参数
   * 没有参数的话，使用缺省时间点，通常是today
 
 === 使用时机 ===
@@ -17,5 +17,5 @@
 
 === 代码示例 ===
   * [http://code.google.com/p/patternstudy/source/browse/trunk/src/study/pattern/analysis/temporal/temporalproperty/TemporalCollection.java TemporalCollection.java]
-  * SingleTemporalCollection.java
-  * BitemporalCollection.java
+  * [http://code.google.com/p/patternstudy/source/browse/trunk/src/study/pattern/analysis/temporal/temporalproperty/SingleTemporalCollection.java]
+  * [http://code.google.com/p/patternstudy/source/browse/trunk/src/study/pattern/analysis/temporal/temporalproperty/BitemporalCollection.java]
